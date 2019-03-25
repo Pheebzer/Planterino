@@ -28,6 +28,7 @@ def poll_sensor(channel):
         # XXXXXXXX, XXXX####, ######XX
    part = ((r[1] & 31) << 6) + (r[2] >> 2)
 
+   # Clamp values, and turn the register value into a percentage
    x = 100-((part - 490)*100/(1023-490))
    x = int(x)
    if x >= 100:
