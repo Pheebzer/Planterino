@@ -7,3 +7,4 @@
   * SQL-connection and insert statement
 3. Index.php
   * PHP code to present the data on a website.
+  * history.php not present in repo due to it being almost identical to index.php
