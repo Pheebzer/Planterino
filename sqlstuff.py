@@ -17,7 +17,6 @@ holder = 20 #placeholder for register value
 stat = ("INSERT INTO moisturelog (date, moisture) VALUES (%s,%s)",(date,holder)) 
 
 conn = pd.connect(host, user=uname, port=3306, passwd=passwd, db=dbname)
-
 curs = conn.cursor()
 curs.execute(*stat)
 conn.commit()

@@ -1,0 +1,4 @@
+# keep credentials away from git
+
+*.txt
+*.ini
