@@ -2,6 +2,7 @@ import sys
 import time
 from RPi import GPIO
 import spidev
+from sqlstuff import DBconn as db
 spi = spidev.SpiDev()
 spi.open(0, 0)
 spi.max_speed_hz = 250000
@@ -60,7 +61,7 @@ def main():
                  moisture = poll_sensor(channel)
                  print("Moisture is "+str(moisture)+"%")
            else:
-              pass
+              db(moisture)
 
    except KeyboardInterrupt:
       GPIO.cleanup()
